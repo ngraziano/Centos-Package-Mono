@@ -1,0 +1,35 @@
+Index: scripts/mono-find-provides.in
+===================================================================
+--- scripts/mono-find-provides.in	(revision 125437)
++++ scripts/mono-find-provides.in	(working copy)
+@@ -48,7 +48,7 @@
+ 				LIBNAME=substr(LIBNAME, 1, length(LIBNAME)-1)
+ 			}
+                         if (VERSION && LIBNAME)
+-                                print "mono(" LIBNAME ") = " VERSION
++                                print "mono-addon(" LIBNAME ") = " VERSION
+                 }
+             ') 2>/dev/null
+ done
+Index: scripts/mono-find-requires.in
+===================================================================
+--- scripts/mono-find-requires.in	(revision 125437)
++++ scripts/mono-find-requires.in	(working copy)
+@@ -68,7 +68,7 @@
+ 					OP=">="
+ 				else
+ 					OP="="
+-				print "mono(" LIBNAME ") " OP " " VERSION
++				print "mono-addon(" LIBNAME ") " OP " " VERSION
+ 				START=0
+ 			}
+ 		    ') 2> /dev/null
+@@ -159,7 +159,7 @@
+ 			/^Name:/    { LIBNAME=$2 }
+ 			END {
+ 				if (VERSION && LIBNAME)
+-					print "mono(" LIBNAME ") = " VERSION
++					print "mono-addon(" LIBNAME ") = " VERSION
+ 			}
+ 		    ') 2>/dev/null
+ 	done
