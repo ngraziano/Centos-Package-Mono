@@ -16,7 +16,7 @@ License:        LGPL v2.1 only
 Group:          Development/Languages/Mono
 Summary:        A .NET Runtime Environment
 Url:            http://www.mono-project.com
-Version:        2.10.4
+Version:        2.10.5
 Release:        5.1.PVPP.0
 Source0:        mono-%{version}.tar.bz2
 Patch0:         addon-reqprov.patch
